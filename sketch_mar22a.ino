@@ -1,12 +1,8 @@
-/*
- * PIR sensor tester
- */
-
 int green = 11;
 int red = 12;
-int blue = 13;                // choose the pin for the LED
-int inputPin = 2;               // choose the input pin (for PIR sensor)
-int val = 0;                    // variable for reading the pin status
+int blue = 13;
+int inputPin = 2;
+int val = 0;
 int iPIR = 0;
  
 void setup() {
@@ -33,8 +29,8 @@ void loop(){
 }
 
 void checkPIR() {
-  val = digitalRead(inputPin);  // read input value
-  if (val == HIGH) {            // check if the input is HIGH
+  val = digitalRead(inputPin);
+  if (val == HIGH) {
     for(iPIR = 0; iPIR < 10; iPIR++) {
       digitalWrite(blue, HIGH);
       delay(100);
